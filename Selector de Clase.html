@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControlFace - Selector de Sección</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="Selector de Clase.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="Logo.png" alt="Logo">
+            <div>
+                <h2>Control<span>face</span></h2>
+                <p>Sistema de Asistencia</p>
+            </div>
+        </div>
+
+        <ul class="menu">
+            <li>
+                <a href="Dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de Secciones.html">
+                    <i class="fa-solid fa-border-all"></i>
+                    Módulo de Secciones
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de personal.html">
+                    <i class="fa-regular fa-user"></i>
+                    Módulo de Personal
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de Materias.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Módulo de Materias
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de Estudiantes.html">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Módulo de Estudiantes
+                </a>
+            </li>
+
+            <li>
+                <a href="Reportes.html">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Reportes
+                </a>
+            </li>
+
+
+
+ <li>
+                <a href="Selector de Clase.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Selector de la Clase
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="Selector de Seccion.html">
+                    <i class="fa-regular fa-file-lines"></i>
+                    Selector de Sección
+                </a>
+            </li>
+
+            
+        </ul>
+
+        <div class="user">
+            <i class="fa-regular fa-circle-user"></i>
+            <div>
+                <h4>Administrador</h4>
+                <span>Admin@clases.edu.sv</span>
+            </div>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+
+    </aside>
+
+    <main class="main">
+
+        <header class="header-sec">
+            <div>
+                <h1>Selector de Sección</h1>
+                <p>Seleccione una sección para gestionar la asistencia</p>
+            </div>
+
+            <div class="header-right">
+                <i class="fa-regular fa-bell"></i>
+                <button type="button" class="btn-logout" onclick="cerrarSesion()">
+                    <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+                </button>
+            </div>
+        </header>
+
+        <section class="search-bar-container">
+            <div class="input-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="inputBuscarSeccion" placeholder="Buscar sección...">
+            </div>
+            <button type="button" class="btn-filtrar">
+                <i class="fa-solid fa-filter"></i> Filtrar
+            </button>
+        </section>
+
+        <section class="secciones-grid" id="gridSecciones">
+
+            <div class="card-seccion blue">
+                <h3>Sección A</h3>
+                <p>Especialidad: Desarrollo de Software</p>
+                <div class="seccion-info">
+                    <span><i class="fa-solid fa-users"></i> 30 Estudiantes</span>
+                    <span><i class="fa-solid fa-user-tie"></i> Prof. Juan Pérez</span>
+                </div>
+                <button type="button" class="btn-seleccionar" onclick="seleccionarSeccion('Sección A')">
+                    Seleccionar Sección <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <div class="card-seccion green">
+                <h3>Sección B</h3>
+                <p>Especialidad: Infraestructura Tecnológica</p>
+                <div class="seccion-info">
+                    <span><i class="fa-solid fa-users"></i> 28 Estudiantes</span>
+                    <span><i class="fa-solid fa-user-tie"></i> Prof. María López</span>
+                </div>
+                <button type="button" class="btn-seleccionar" onclick="seleccionarSeccion('Sección B')">
+                    Seleccionar Sección <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <div class="card-seccion purple">
+                <h3>Sección C</h3>
+                <p>Especialidad: Diseño Gráfico Digital</p>
+                <div class="seccion-info">
+                    <span><i class="fa-solid fa-users"></i> 25 Estudiantes</span>
+                    <span><i class="fa-solid fa-user-tie"></i> Prof. Carlos Gómez</span>
+                </div>
+                <button type="button" class="btn-seleccionar" onclick="seleccionarSeccion('Sección C')">
+                    Seleccionar Sección <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <div class="card-seccion yellow">
+                <h3>Sección D</h3>
+                <p>Especialidad: Electrónica Industrial</p>
+                <div class="seccion-info">
+                    <span><i class="fa-solid fa-users"></i> 32 Estudiantes</span>
+                    <span><i class="fa-solid fa-user-tie"></i> Prof. Ana Martínez</span>
+                </div>
+                <button type="button" class="btn-seleccionar" onclick="seleccionarSeccion('Sección D')">
+                    Seleccionar Sección <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+        </section>
+
+        <footer>
+            © ControlFace - Sistema de Asistencia con Reconocimiento Facial
+        </footer>
+
+    </main>
+
+    <script src="Selector de Seccion.js"></script>
+</body>
+
+</html>

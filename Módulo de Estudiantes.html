@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControlFace - Módulo de Estudiantes</title>
+
+    <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Módulo de Estudiantes.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR 100% IDENTICO AL DE PERSONAL -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="Logo.png" alt="Logo">
+            <div>
+                <h2>Control<span>face</span></h2>
+                <p>Sistema de Asistencia</p>
+            </div>
+        </div>
+
+        <ul class="menu">
+            <li>
+                <a href="Dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de Secciones.html">
+                    <i class="fa-solid fa-border-all"></i>
+                    Módulo de Secciones
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de personal.html">
+                    <i class="fa-regular fa-user"></i>
+                    Módulo de Personal
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="Módulo de Estudiantes.html">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Módulo de Estudiantes
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de Materias.html">
+                    <i class="fa-solid fa-border-all"></i>
+                    Módulo de Materias 
+                </a>
+            </li>   
+
+           <li>
+    <a href="Reportes.html">
+        <i class="fa-solid fa-chart-column"></i>
+        Reportes
+    </a>
+
+ <li>
+                <a href="Selector de Clase.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Selector de la Clase
+                </a>
+            </li>
+
+</li>
+            <li>
+                <a href="Selector de Seccion.html">
+                    <i class="fa-regular fa-file-lines"></i>
+                    Selector de Sección
+                </a>
+            </li>
+           
+        </ul>
+
+        <div class="user">
+            <i class="fa-regular fa-circle-user"></i>
+            <div>
+                <h4>Administrador</h4>
+                <span>Admin@clases.edu.sv</span>
+            </div>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main">
+
+        <header>
+            <div>
+                <h1>Módulo de Estudiantes</h1>
+                <p>Seleccione una opción para gestionar o registrar estudiantes</p>
+            </div>
+
+            <div class="header-icons">
+                <i class="fa-regular fa-bell"></i>
+                <button type="button" onclick="cerrarSesion()">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Cerrar Sesión
+                </button>
+            </div>
+        </header>
+
+        <!-- TARJETAS CENTRADAS -->
+        <section class="cards-centradas-container">
+
+            <!-- Buscar / Gestión de Estudiantes -->
+            <div class="module">
+                <div class="circle azul">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <h3>Buscar Estudiantes</h3>
+                <p>Buscar y ver información de los estudiantes.</p>
+                <button type="button" onclick="irBuscarEstudiantes()">
+                    Acceder <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Registrar Estudiante -->
+            <div class="module">
+                <div class="circle verde">
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+                <h3>Registrar Estudiante</h3>
+                <p>Registrar un nuevo estudiante en el sistema.</p>
+                <button type="button" onclick="irRegistrarEstudiante()">
+                    Acceder <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+        </section>
+
+        <footer>
+            © ControlFace - Sistema de Asistencia con Reconocimiento Facial
+        </footer>
+
+    </main>
+
+    <script src="Módulo de Estudiantes.js"></script>
+</body>
+
+</html>

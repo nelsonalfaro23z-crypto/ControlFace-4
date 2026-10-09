@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControlFace - Módulo de Materias</title>
+
+    <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Módulo de Materias.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR IGUAL AL DASHBOARD -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="Logo.png" alt="Logo">
+            <div>
+                <h2>Control<span>face</span></h2>
+                <p>Sistema de Asistencia</p>
+            </div>
+        </div>
+
+        <ul class="menu">
+            <li>
+                <a href="Dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de Secciones.html">
+                    <i class="fa-solid fa-border-all"></i>
+                    Módulo de Secciones
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de personal.html">
+                    <i class="fa-regular fa-user"></i>
+                    Módulo de Personal
+                </a>
+            </li>
+
+            <!-- OPCIÓN ACTIVA -->
+            <li class="active">
+                <a href="Módulo de Materias.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Módulo de Materias
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de Estudiantes.html">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Módulo de Estudiantes
+                </a>
+            </li>
+
+            <li>
+                <a href="Reportes.html">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Reportes
+                </a>
+            </li>
+
+ <li>
+                <a href="Selector de Clase.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Selector de la Clase
+                </a>
+            </li>
+
+            <li>
+                <a href="Selector de Seccion.html">
+                    <i class="fa-regular fa-file-lines"></i>
+                    Selector de Sección
+                </a>
+            </li>
+           
+        </ul>
+
+        <div class="user">
+            <i class="fa-regular fa-circle-user"></i>
+            <div>
+                <h4>Administrador</h4>
+                <span>Admin@clases.edu.sv</span>
+            </div>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main">
+
+        <!-- HEADER -->
+        <header>
+            <div>
+                <h1>Creación y catálogo de materias</h1>
+                <p>Define y administra las asignaturas que se imparten en la institución</p>
+            </div>
+
+            <div class="header-icons">
+                <i class="fa-regular fa-bell"></i>
+                <button type="button" onclick="window.location.href='index.html'">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Cerrar Sesión
+                </button>
+            </div>
+        </header>
+
+        <!-- SECCIÓN DE CONTENIDO GRID -->
+        <div class="materias-container">
+
+            <!-- TABLA DE LISTADO DE MATERIAS -->
+            <div class="card-tabla">
+                <div class="card-header">
+                    <div class="card-title">
+                        <i class="fa-solid fa-book"></i>
+                        <span>Listado de Materias</span>
+                    </div>
+                    <button class="btn-nueva" id="btnNuevaMateria"><i class="fa-solid fa-plus"></i> Nueva Materia</button>
+                </div>
+
+                <div class="table-responsive">
+                    <table id="tablaMaterias">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nombre de la materia</th>
+                                <th>Horas semanales</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Matemáticas</td>
+                                <td>4</td>
+                                <td>
+                                    <button class="btn-action edit"><i class="fa-regular fa-pen-to-square"></i></button>
+                                    <button class="btn-action delete"><i class="fa-regular fa-trash-can"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lenguaje y Literatura</td>
+                                <td>6</td>
+                                <td>
+                                    <button class="btn-action edit"><i class="fa-regular fa-pen-to-square"></i></button>
+                                    <button class="btn-action delete"><i class="fa-regular fa-trash-can"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Inglés</td>
+                                <td>5</td>
+                                <td>
+                                    <button class="btn-action edit"><i class="fa-regular fa-pen-to-square"></i></button>
+                                    <button class="btn-action delete"><i class="fa-regular fa-trash-can"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Módulo</td>
+                                <td>18</td>
+                                <td>
+                                    <button class="btn-action edit"><i class="fa-regular fa-pen-to-square"></i></button>
+                                    <button class="btn-action delete"><i class="fa-regular fa-trash-can"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Sociales</td>
+                                <td>5</td>
+                                <td>
+                                    <button class="btn-action edit"><i class="fa-regular fa-pen-to-square"></i></button>
+                                    <button class="btn-action delete"><i class="fa-regular fa-trash-can"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Informática</td>
+                                <td>2</td>
+                                <td>
+                                    <button class="btn-action edit"><i class="fa-regular fa-pen-to-square"></i></button>
+                                    <button class="btn-action delete"><i class="fa-regular fa-trash-can"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Ciencia y Tecnología</td>
+                                <td>6</td>
+                                <td>
+                                    <button class="btn-action edit"><i class="fa-regular fa-pen-to-square"></i></button>
+                                    <button class="btn-action delete"><i class="fa-regular fa-trash-can"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>OPLV</td>
+                                <td>2</td>
+                                <td>
+                                    <button class="btn-action edit"><i class="fa-regular fa-pen-to-square"></i></button>
+                                    <button class="btn-action delete"><i class="fa-regular fa-trash-can"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>PDV</td>
+                                <td>2</td>
+                                <td>
+                                    <button class="btn-action edit"><i class="fa-regular fa-pen-to-square"></i></button>
+                                    <button class="btn-action delete"><i class="fa-regular fa-trash-can"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Finanzas y Economías</td>
+                                <td>2</td>
+                                <td>
+                                    <button class="btn-action edit"><i class="fa-regular fa-pen-to-square"></i></button>
+                                    <button class="btn-action delete"><i class="fa-regular fa-trash-can"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- FORMULARIO DE NUEVA MATERIA -->
+            <div class="card-formulario">
+                <div class="card-header">
+                    <div class="card-title">
+                        <i class="fa-solid fa-book"></i>
+                        <span id="formTitulo">Nueva Materia</span>
+                    </div>
+                </div>
+
+                <form id="formMateria">
+                    <input type="hidden" id="editRowIndex" value="">
+
+                    <div class="form-group">
+                        <label>Código de Materia *</label>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-id-card"></i>
+                            <input type="text" id="codigoMateria" placeholder="EJ.DS-2026" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nombre de la Materia *</label>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-book-open"></i>
+                            <input type="text" id="nombreMateria" placeholder="Ej. Lenguaje y Literatura" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Horas Semanales *</label>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-clock"></i>
+                            <input type="number" id="horasMateria" placeholder="Ej. 4" min="1" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Descripción</label>
+                        <div class="input-icon textarea-icon">
+                            <i class="fa-regular fa-file-lines"></i>
+                            <textarea id="descripcionMateria" rows="4" placeholder="Ingrese una breve descripción de la materia..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-guardar" id="btnGuardar">
+                            <i class="fa-solid fa-floppy-disk"></i> Guardar Materia
+                        </button>
+                        <button type="button" class="btn-cancelar" id="btnCancelar">
+                            <i class="fa-solid fa-xmark"></i> Cancelar
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <footer>
+            © ControlFace - Sistema de Asistencia con Reconocimiento Facial
+        </footer>
+
+    </main>
+
+    <!-- SCRIPT DE FUNCIONALIDAD -->
+    <script src="script-materias.js"></script>
+</body>
+
+</html>

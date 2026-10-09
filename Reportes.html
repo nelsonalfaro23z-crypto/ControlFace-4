@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControlFace - Reportes</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+    <link rel="stylesheet" href="Reportes.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="Logo.png" alt="Logo">
+            <div>
+                <h2>Control<span>face</span></h2>
+                <p>Sistema de Asistencia</p>
+            </div>
+        </div>
+
+        <ul class="menu">
+            <li>
+                <a href="Dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de Secciones.html">
+                    <i class="fa-solid fa-border-all"></i>
+                    Módulo de Secciones
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de personal.html">
+                    <i class="fa-regular fa-user"></i>
+                    Módulo de Personal
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de Materias.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Módulo de Materias
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de Estudiantes.html">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Módulo de Estudiantes
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="Reportes.html">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Reportes
+                </a>
+            </li>
+
+            <li>
+
+ <li>
+                <a href="Selector de Clase.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Selector de la Clase
+                </a>
+            </li>
+
+          <li>
+                <a href="Selector de Seccion.html">
+                    <i class="fa-regular fa-file-lines"></i>
+                    Selector de Sección
+                </a>
+            </li>
+
+           
+        </ul>
+
+        <div class="user">
+            <i class="fa-regular fa-circle-user"></i>
+            <div>
+                <h4>Administrador</h4>
+                <span>Admin@clases.edu.sv</span>
+            </div>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+
+    </aside>
+
+    <main class="main">
+
+        <header class="header-reportes">
+            <div>
+                <h1>Reportes</h1>
+                <p>Resumen general de asistencia y estadísticas del sistema</p>
+            </div>
+
+            <div class="header-controls">
+                <div class="filtros-fecha">
+                    <div class="input-fecha">
+                        <i class="fa-regular fa-calendar"></i>
+                        <input type="date" id="fechaInicio" value="2026-10-01">
+                    </div>
+                    <span>a</span>
+                    <div class="input-fecha">
+                        <i class="fa-regular fa-calendar"></i>
+                        <input type="date" id="fechaFin" value="2026-10-31">
+                    </div>
+                </div>
+
+                <div class="export-dropdown-container">
+                    <button type="button" class="btn-exportar" id="btnExportarToggle">
+                        <i class="fa-solid fa-download"></i> Exportar <i class="fa-solid fa-chevron-down icon-arrow"></i>
+                    </button>
+                    <div class="export-dropdown-menu" id="exportDropdownMenu">
+                        <a href="#" id="exportPDF">
+                            <i class="fa-regular fa-file-pdf"></i> Exportar a PDF
+                        </a>
+                        <a href="#" id="exportExcel">
+                            <i class="fa-regular fa-file-excel"></i> Exportar a Excel
+                        </a>
+                    </div>
+                </div>
+
+                <div class="header-user-actions">
+                    <i class="fa-regular fa-bell"></i>
+                    <button type="button" class="btn-logout" onclick="cerrarSesion()">
+                        <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <section class="cards-reportes">
+
+            <div class="card-rep green">
+                <div class="card-rep-top">
+                    <span>Asistencias</span>
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+                <h2>85%</h2>
+                <small>850 Estudiantes</small>
+            </div>
+
+            <div class="card-rep red">
+                <div class="card-rep-top">
+                    <span>Faltas</span>
+                    <i class="fa-solid fa-user-xmark"></i>
+                </div>
+                <h2>8%</h2>
+                <small>80 Estudiantes</small>
+            </div>
+
+            <div class="card-rep yellow">
+                <div class="card-rep-top">
+                    <span>Tardanzas</span>
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <h2>5%</h2>
+                <small>50 Estudiantes</small>
+            </div>
+
+            <div class="card-rep blue">
+                <div class="card-rep-top">
+                    <span>Justificaciones</span>
+                    <i class="fa-solid fa-file-signature"></i>
+                </div>
+                <h2>2%</h2>
+                <small>20 Estudiantes</small>
+            </div>
+
+        </section>
+
+        <section class="graficas-grid">
+
+            <div class="card-grafica">
+                <h3>Asistencia General</h3>
+
+                <div class="chart-content">
+                    <div class="donut-chart-container">
+                        <div class="donut-chart">
+                            <div class="donut-center">
+                                <strong>1,000</strong>
+                                <span>Total</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <span class="dot green"></span>
+                            <span class="legend-text">Asistencias</span>
+                            <strong>85%</strong>
+                        </div>
+                        <div class="legend-item">
+                            <span class="dot red"></span>
+                            <span class="legend-text">Faltas</span>
+                            <strong>8%</strong>
+                        </div>
+                        <div class="legend-item">
+                            <span class="dot yellow"></span>
+                            <span class="legend-text">Tardanzas</span>
+                            <strong>5%</strong>
+                        </div>
+                        <div class="legend-item">
+                            <span class="dot blue"></span>
+                            <span class="legend-text">Justificaciones</span>
+                            <strong>2%</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-grafica">
+                <h3>Asistencia por Sección</h3>
+                <ul class="lista-secciones">
+                    <li>
+                        <span class="seccion-label">Sección A</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 90%;"></div>
+                        </div>
+                        <strong class="porcentaje">90%</strong>
+                    </li>
+                    <li>
+                        <span class="seccion-label">Sección B</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 82%;"></div>
+                        </div>
+                        <strong class="porcentaje">82%</strong>
+                    </li>
+                    <li>
+                        <span class="seccion-label">Sección C</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 88%;"></div>
+                        </div>
+                        <strong class="porcentaje">88%</strong>
+                    </li>
+                    <li>
+                        <span class="seccion-label">Sección D</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 79%;"></div>
+                        </div>
+                        <strong class="porcentaje">79%</strong>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="card-reporte-detallado">
+            <h3>Reporte Detallado</h3>
+
+            <div class="table-responsive">
+                <table id="tablaReporte">
+                    <thead>
+                        <tr>
+                            <th>Estudiante</th>
+                            <th>Sección</th>
+                            <th>Asistencias</th>
+                            <th>Faltas</th>
+                            <th>Tardanzas</th>
+                            <th>Justificaciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Juan Pérez</td>
+                            <td>Sección A</td>
+                            <td class="num green">18</td>
+                            <td class="num red">1</td>
+                            <td class="num yellow">1</td>
+                            <td class="num blue">0</td>
+                        </tr>
+                        <tr>
+                            <td>María López</td>
+                            <td>Sección A</td>
+                            <td class="num green">20</td>
+                            <td class="num red">0</td>
+                            <td class="num yellow">0</td>
+                            <td class="num blue">0</td>
+                        </tr>
+                        <tr>
+                            <td>Carlos Gómez</td>
+                            <td>Sección B</td>
+                            <td class="num green">15</td>
+                            <td class="num red">3</td>
+                            <td class="num yellow">2</td>
+                            <td class="num blue">1</td>
+                        </tr>
+                        <tr>
+                            <td>Ana Martínez</td>
+                            <td>Sección B</td>
+                            <td class="num green">19</td>
+                            <td class="num red">0</td>
+                            <td class="num yellow">1</td>
+                            <td class="num blue">0</td>
+                        </tr>
+                        <tr>
+                            <td>Luis Hernández</td>
+                            <td>Sección C</td>
+                            <td class="num green">17</td>
+                            <td class="num red">2</td>
+                            <td class="num yellow">1</td>
+                            <td class="num blue">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer>
+            © ControlFace - Sistema de Asistencia con Reconocimiento Facial
+        </footer>
+
+    </main>
+
+    <script src="Reportes.js"></script>
+</body>
+
+</html>

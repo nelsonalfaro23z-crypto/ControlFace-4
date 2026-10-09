@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #08031a; /* Fondo ultra oscuro */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Botón Volver */
+.btn-volver {
+    position: absolute;
+    left: 0;
+    top: -40px;
+    background: none;
+    border: none;
+    color: #a5a5a5;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.btn-volver:hover {
+    color: #ffffff;
+}
+
+/* Header y Logo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.apple-logo {
+    width: 55px;
+    height: 55px;
+    fill: #ffffff;
+    margin-bottom: 15px;
+}
+
+.logo-container h1 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #7e7e86;
+    font-size: 14px;
+}
+
+/* Tarjeta Contenedora */
+.card {
+    background-color: #272437; /* Color morado grisáceo de la imagen */
+    border-radius: 12px;
+    padding: 35px 40px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Avatar de Usuario */
+.avatar-container {
+    margin-bottom: 15px;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #4c00b0, #8200ff);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(130, 0, 255, 0.4);
+}
+
+.avatar .material-symbols-outlined {
+    font-size: 35px;
+    color: #ffffff;
+}
+
+.card-title {
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    color: #e1e1e6;
+    margin-bottom: 35px;
+    max-width: 280px;
+    line-height: 1.4;
+}
+
+/* Lista de características */
+.info-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Cajas de iconos blancas de la imagen */
+.icon-box {
+    background-color: #ffffff;
+    color: #272437;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.icon-box .material-symbols-outlined {
+    font-size: 26px;
+}
+
+/* Textos de la lista */
+.info-text h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.info-text p {
+    font-size: 13px;
+    color: #b3b3b9;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%; /* Dejamos un margen a los lados */
+    }
+    
+    .card {
+        padding: 30px 25px; /* Reducimos un poco el espacio interno */
+    }
+}
+
+/* Para pantallas de celulares (menos de 480px) */
+@media (max-width: 480px) {
+    body {
+        align-items: flex-start; /* En celus es mejor que empiece desde arriba si hay scroll */
+        padding-top: 60px; /* Espacio para que el botón volver no estorbe */
+    }
+
+    .btn-volver {
+        top: -45px;
+        left: 10px;
+    }
+
+    .logo-container h1 {
+        font-size: 20px; /* Texto un cachito más pequeño */
+    }
+
+    .apple-logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .card {
+        padding: 20px 15px; /* Tarjeta más compacta */
+    }
+
+    .card-title {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .info-item {
+        gap: 12px; /* Juntamos un poquito más los iconos de los textos */
+    }
+
+    .icon-box {
+        width: 38px;
+        height: 38px; /* Iconos sutilmente más pequeños */
+    }
+
+    .icon-box .material-symbols-outlined {
+        font-size: 22px;
+    }
+
+    .info-text h3 {
+        font-size: 14px;
+    }
+
+    .info-text p {
+        font-size: 12px; /* Bajamos un punto la letra para que quepa todo */
+    }
+}

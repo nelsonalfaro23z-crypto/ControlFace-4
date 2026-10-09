@@ -1,0 +1,510 @@
+/*=========================
+        GOOGLE FONT
+==========================*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter', sans-serif;
+}
+
+body{
+    background:#d4d4d8; /* Fondo principal gris claro estilo Imagen 1 */
+    display:flex;
+    min-height:100vh;
+    color:#2d3748;
+}
+
+/*=========================
+        SIDEBAR
+==========================*/
+
+.sidebar{
+    width:280px;
+    background:#080133; /* Azul oscuro noche de la Imagen 1 */
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:25px;
+    position:fixed;
+    top:0;
+    left:0;
+    height:100vh;
+    box-shadow:6px 0 25px rgba(0,0,0,.12);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+}
+
+.logo h2{
+    font-size:24px;
+    font-weight:700;
+}
+
+.logo span{
+    color:#2b3ced;
+}
+
+.logo p{
+    font-size:13px;
+    opacity:.9;
+}
+
+.menu{
+    list-style:none;
+    margin-top:40px;
+}
+
+.menu li{
+    margin-bottom:12px;
+}
+
+.menu li a{
+    text-decoration:none;
+    color:white;   /* color menu*/
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:14px 18px;
+    border-radius:14px;
+    transition:.3s;
+    font-size:15px;
+}
+
+.menu li a:hover{
+    background:rgba(255,255,255,.12);
+}
+
+.menu li.active a{
+    background:#2b3ced; /* Azul vibrante activo */
+    color:#ffffff;
+    font-weight:600;
+}
+
+.menu i{
+    font-size:20px;
+}
+
+.user{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:#181156; /* Fondo azul medio oscuro para el perfil admin */
+    padding:15px;
+    border-radius:16px;
+}
+
+.user i:first-child{
+    font-size:42px;
+}
+
+.user h4{
+    font-size:15px;
+}
+
+.user span{
+    font-size:12px;
+    opacity:.8;
+}
+
+.user .fa-angle-down{
+    margin-left:auto;
+}
+
+/*=========================
+        CONTENIDO
+==========================*/
+
+.main{
+    margin-left:280px;
+    width:calc(100% - 280px);
+    padding:35px;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+header h1{
+    font-size:32px;
+    font-weight:700;
+    color:#080133;
+}
+
+header p{
+    color:#4b5563;
+    margin-top:6px;
+}
+
+.header-icons{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.header-icons .fa-bell{
+    font-size:22px;
+    color:#080133;
+    cursor:pointer;
+}
+
+/* Botón Cerrar Sesión igual a la Imagen 1 */
+.header-icons button{
+    background:#ffffff;
+    color:#812492; /* Texto e ícono en tono morado/azul de la Imagen 1 */
+    border:1px solid #e5e7eb;
+    padding:12px 22px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.header-icons button:hover{
+    background:#f3f4f6;
+}
+
+.header-icons button i{
+    margin-right:8px;
+}
+
+/*=========================
+      TARJETAS SUPERIORES
+==========================*/
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    margin-bottom:45px;
+}
+
+.card{
+    background:#070033;
+    border-radius:20px;
+    padding:25px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.card .icon{
+    width:70px;
+    height:70px;
+    border-radius:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:28px;
+}
+
+.card span{
+    color:#6b7280;
+    font-size:14px;
+}
+
+.card h2{
+    font-size:32px;
+    margin:6px 0;
+    color:#fbfbfb;
+}
+
+.card small{
+    color:#9ca3af;
+}
+
+.blue .icon{
+    background:#2b3ced;
+}
+
+.green .icon{
+    background:#10b981;
+}
+
+.purple .icon{
+    background:#8b5cf6;
+}
+
+.orange .icon{
+    background:#f59e0b;
+}
+
+/*=========================
+      TITULO MODULOS
+==========================*/
+
+.titulo{
+    font-size:28px;
+    font-weight:700;
+    color:#080133;
+    margin-bottom:25px;
+}
+
+/*=========================
+        MODULOS
+==========================*/
+
+.modules{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+    margin-bottom:40px;
+}
+
+.module{
+    background:#070033;
+    border-radius:22px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.35s ease;
+    cursor:pointer;
+}
+
+.module:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 45px rgba(0,0,0,.15);
+}
+
+.circle{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    margin-bottom:22px;
+}
+
+.circle i{
+    color:#fff;
+    font-size:38px;
+}
+
+.azul{
+    background:#2b3ced;
+}
+
+.verde{
+    background:#10b981;
+}
+
+.morado{
+    background:#8b5cf6;
+}
+
+.naranja{
+    background:#f59e0b;
+}
+
+.celeste{
+    background:#06b6d4;
+}
+
+.azul2{
+    background:#2563eb;
+}
+
+.module h3{
+    font-size:22px;
+    color:#f4f4f5;
+    margin-bottom:12px;
+}
+
+.module p{
+    color:#6b7280;
+    font-size:15px;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+.module button{
+    width:100%;
+    border:none;
+    background:#2b3ced;
+    color:white;
+    padding:15px;
+    border-radius:12px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.module button:hover{
+    background:#1d29bc;
+}
+
+.module button i{
+    margin-left:10px;
+}
+
+/*=========================
+          FOOTER
+==========================*/
+
+footer{
+    margin-top:20px;
+    text-align:center;
+    color:#4b5563;
+    font-size:14px;
+    padding:25px 0;
+    border-top:1px solid #d1d5db;
+}
+
+/*=========================
+        SCROLLBAR
+==========================*/
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2b3ced;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#ececec;
+}
+
+/*=========================
+       ANIMACIONES
+==========================*/
+
+.card,
+.module{
+    animation:mostrar .6s ease;
+}
+
+@keyframes mostrar{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/*=========================
+        RESPONSIVE
+==========================*/
+
+@media(max-width:1300px){
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.modules{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:992px){
+
+.sidebar{
+
+left:-280px;
+
+}
+
+.main{
+
+margin-left:0;
+width:100%;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.modules{
+
+grid-template-columns:1fr;
+
+}
+
+header{
+
+flex-direction:column;
+align-items:flex-start;
+gap:20px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.main{
+
+padding:20px;
+
+}
+
+header h1{
+
+font-size:24px;
+
+}
+
+.card{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+.card h2{
+
+font-size:28px;
+
+}
+
+.module{
+
+padding:25px;
+
+}
+
+.logo h2{
+
+font-size:20px;
+
+}
+
+}

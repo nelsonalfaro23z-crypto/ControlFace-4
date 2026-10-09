@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControlFace - Selector de Sección Pre - Asistencia</title>
+
+    <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Selector de Seccion.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR MANTENIDO CON ENLACES FUNCIONALES -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="Logo.png" alt="Logo">
+            <div>
+                <h2>Control<span>face</span></h2>
+                <p>Sistema de Asistencia</p>
+            </div>
+        </div>
+
+        <ul class="menu">
+            <li>
+                <a href="Dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de Secciones.html">
+                    <i class="fa-solid fa-border-all"></i>
+                    Módulo de Secciones
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de personal.html">
+                    <i class="fa-regular fa-user"></i>
+                    Módulo de Personal
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de Estudiantes.html">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Módulo de Estudiantes
+                </a>
+            </li>
+
+            <li>
+                <a href="Reportes.html">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Reportes
+                </a>
+            </li>
+
+
+<li>
+                <a href="Selector de Clase.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Selector de la Clase
+                </a>
+            </li>
+
+            <!-- OPCIÓN ACTIVA -->
+            <li class="active">
+                <a href="Selector de Seccion.css">
+                    <i class="fa-regular fa-file-lines"></i>
+                    Selector de Sección
+                </a>
+            </li>
+
+        
+        </ul>
+
+        <div class="user">
+            <i class="fa-regular fa-circle-user"></i>
+            <div>
+                <h4>Administrador</h4>
+                <span>Admin@clases.edu.sv</span>
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main">
+
+        <!-- HEADER -->
+        <header class="header-sec">
+            <div>
+                <h1>Selector de Sección Pre - Asistencia</h1>
+                <p>Seleccione el año y la sección específica antes de iniciar el escaneo</p>
+            </div>
+
+            <div class="header-right">
+                <i class="fa-regular fa-bell"></i>
+                <div class="divider"></div>
+                <button type="button" class="btn-logout" onclick="window.location.href='index.html'">
+                    <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+                </button>
+            </div>
+        </header>
+
+        <!-- TARJETA PRINCIPAL DE SELECCIÓN -->
+        <section class="card-preasistencia">
+            
+            <div class="card-icon-container">
+                <div class="icon-circle">
+                    <i class="fa-solid fa-user-group"></i>
+                </div>
+            </div>
+
+            <h2>Seleccione la sección para iniciar el escaneo</h2>
+
+            <form class="form-preasistencia" onsubmit="event.preventDefault();">
+                
+                <div class="select-grid">
+                    
+                    <div class="select-group">
+                        <label for="selectAño">Año</label>
+                        <div class="select-wrapper">
+                            <select id="selectAño">
+                                <option value="1">1° Año</option>
+                                <option value="2">2° Año</option>
+                                <option value="3">3° Año</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+
+                    <div class="select-group">
+                        <label for="selectEspecialidad">Especialidad</label>
+                        <div class="select-wrapper">
+                            <select id="selectEspecialidad">
+                                <option value="ds">Desarrollo de Software</option>
+                                <option value="infra">Infraestructura Tecnológica</option>
+                                <option value="diseno">Diseño Gráfico Digital</option>
+                                <option value="elec">Electrónica Industrial</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+
+                    <div class="select-group">
+                        <label for="selectSeccion">Sección</label>
+                        <div class="select-wrapper">
+                            <select id="selectSeccion">
+                                <option value="K">"K"</option>
+                                <option value="A">"A"</option>
+                                <option value="B">"B"</option>
+                                <option value="C">"C"</option>
+                                <option value="D">"D"</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button type="button" class="btn-iniciar-escaneo" onclick="window.location.href='EscaneoTiempoReal.html'">
+                    <i class="fa-solid fa-expand"></i> Iniciar Escaneo
+                </button>
+
+            </form>
+
+        </section>
+
+        <footer>
+            © Controlface - Sistema de Asistencia con Reconocimiento Facial
+        </footer>
+
+    </main>
+
+</body>
+
+</html>

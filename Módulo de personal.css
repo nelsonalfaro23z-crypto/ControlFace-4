@@ -1,0 +1,45 @@
+/*==========================================================
+  IMPORTA DIRECTAMENTE LOS ESTILOS DEL DASHBOARD
+  (Mantiene 1:1 el sidebar, menú, fuentes, espaciados y colores)
+==========================================================*/
+@import url('Dashboard.css');
+
+/*==========================================================
+  ESTRUCTURA DE CONTENIDO Y CENTRADO DE TARJETAS
+==========================================================*/
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.cards-centradas-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.cards-centradas-container .module {
+    flex: 1;
+    max-width: 450px;
+    margin-bottom: 0;
+}
+
+/* RESPONSIVE */
+@media(max-width: 992px) {
+    .cards-centradas-container {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .cards-centradas-container .module {
+        width: 100%;
+        max-width: 100%;
+    }
+}

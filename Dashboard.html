@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControlFace - Dashboard</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="Dashboard.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="Logo.png" alt="Logo">
+            <div>
+                <h2>Control<span>face</span></h2>
+                <p>Sistema de Asistencia</p>
+            </div>
+        </div>
+
+        <ul class="menu">
+            <li class="active">
+                <a href="Dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de Secciones.html">
+                    <i class="fa-solid fa-border-all"></i>
+                    Módulo de Secciones
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de personal.html">
+                    <i class="fa-regular fa-user"></i>
+                    Módulo de Personal
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de Materias.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Módulo de Materias 
+                </a>
+            </li>            
+
+            <li>
+                <a href="Módulo de Estudiantes.html">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Módulo de Estudiantes
+                </a>
+            </li>
+
+            <li>
+                <a href="Reportes.html">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Reportes
+                </a>
+            </li>
+
+ <li>
+                <a href="Selector de Clase.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Selector de la Clase
+                </a>
+            </li>
+
+            <li>
+                <a href="Selector de Seccion.html">
+                    <i class="fa-regular fa-file-lines"></i>
+                    Selector de Sección
+                </a>
+            </li>
+
+           
+        </ul>
+
+        <div class="user">
+            <i class="fa-regular fa-circle-user"></i>
+            <div>
+                <h4>Administrador</h4>
+                <span>Admin@clases.edu.sv</span>
+            </div>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+
+    </aside>
+
+    <main class="main">
+
+        <header>
+            <div>
+                <h1>BIENVENIDO, ADMINISTRADOR</h1>
+                <p>Aquí tiene un resumen general del sistema</p>
+            </div>
+
+            <div class="header-icons">
+                <i class="fa-regular fa-bell"></i>
+                <button type="button" onclick="window.location.href='index.html'">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Cerrar Sesión
+                </button>
+            </div>
+        </header>
+
+        <section class="cards">
+
+            <div class="card blue">
+                <div class="icon">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <div>
+                    <span>Estudiantes</span>
+                    <h2>542</h2>
+                    <small>Activos</small>
+                </div>
+            </div>
+
+            <div class="card green">
+                <div class="icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <div>
+                    <span>Profesores</span>
+                    <h2>38</h2>
+                    <small>Activos</small>
+                </div>
+            </div>
+
+            <div class="card purple">
+                <div class="icon">
+                    <i class="fa-regular fa-calendar-check"></i>
+                </div>
+                <div>
+                    <span>Asistencias Hoy</span>
+                    <h2>487</h2>
+                    <small>Registros</small>
+                </div>
+            </div>
+
+            <div class="card orange">
+                <div class="icon">
+                    <i class="fa-regular fa-folder-open"></i>
+                </div>
+                <div>
+                    <span>Clases Hoy</span>
+                    <h2>26</h2>
+                    <small>Programadas</small>
+                </div>
+            </div>
+
+        </section>
+
+        <h2 class="titulo">Módulos Del Sistema</h2>
+
+        <section class="modules">
+
+            <div class="module">
+                <div class="circle azul">
+                    <i class="fa-solid fa-border-all"></i>
+                </div>
+                <h3>Módulo de Secciones</h3>
+                <p>Gestiona las secciones, grados y años existentes.</p>
+                <button type="button" onclick="window.location.href='Módulo de Secciones.html'">Acceder <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="module">
+                <div class="circle verde">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h3>Módulo de Personal</h3>
+                <p>Administra profesores y personal del colegio.</p>
+                <button type="button" onclick="window.location.href='Módulo de personal.html'">Acceder <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="module">
+                <div class="circle morado">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <h3>Módulo de Estudiantes</h3>
+                <p>Administra la información de los alumnos.</p>
+                <button type="button" onclick="window.location.href='Módulo de Estudiantes.html'">Acceder <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="module">
+                <div class="circle naranja">
+                    <i class="fa-solid fa-chart-column"></i>
+                </div>
+                <h3>Reportes</h3>
+                <p>Estadísticas y análisis de datos del sistema.</p>
+                <button type="button" onclick="window.location.href='Reportes.html'">Acceder <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="module">
+                <div class="circle celeste">
+                    <i class="fa-regular fa-clipboard"></i>
+                </div>
+                <h3>Selector de Sección</h3>
+                <p>Selecciona la sección para ver asistencias.</p>
+                <button type="button" onclick="window.location.href='Selector de Seccion.html'">Acceder <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="module">
+                <div class="circle azul2">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <h3>Selector de Clase</h3>
+                <p>Elige la materia con el profesor correspondiente.</p>
+                <button type="button" onclick="window.location.href='Selector de Clase.html'">Acceder <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+        </section>
+
+        <footer>
+            © ControlFace - Sistema de Asistencia con Reconocimiento Facial
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

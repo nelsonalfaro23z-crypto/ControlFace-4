@@ -1,0 +1,276 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Roboto,sans-serif;
+}
+
+body{
+
+    background:#0f0826;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:100vh;
+
+    color:white;
+
+}
+
+.volver{
+
+    position:absolute;
+
+    left:40px;
+
+    top:30px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+.contenedor{
+
+    text-align:center;
+
+}
+
+.logo{
+
+    width:70px;
+
+    margin-bottom:20px;
+
+}
+
+h1{
+
+    font-size:36px;
+
+    font-weight:500;
+
+}
+
+.subtitulo{
+
+    margin-top:10px;
+
+    color:#d5d5d5;
+
+    margin-bottom:40px;
+
+}
+
+.login{
+
+    width:470px;
+
+    background:#2b2552;
+
+    padding:40px;
+
+    border-radius:10px;
+
+    text-align:left;
+
+    margin:auto;
+
+}
+
+.login h2{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+.descripcion{
+
+    text-align:center;
+
+    color:#d6d6d6;
+
+    margin-bottom:30px;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:5px;
+
+    background:#413a6b;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+input::placeholder{
+
+    color:#b8b8b8;
+
+}
+
+a{
+
+    display:block;
+
+    color:white;
+
+    margin-top:18px;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+}
+
+.texto{
+
+    margin-top:50px;
+
+    color:#d0d0d0;
+
+    font-size:13px;
+
+    line-height:22px;
+
+}
+
+.texto span{
+
+    color:#9d69ff;
+
+}
+
+.botones{
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.crear{
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+.siguiente{
+
+    background:#8b3dff;
+
+    border:none;
+
+    color:white;
+
+    width:140px;
+
+    height:45px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    transition:.3s;
+
+}
+
+.siguiente:hover{
+
+    background:#7428f1;
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%; /* Dejamos un margen a los lados */
+    }
+    
+    .card {
+        padding: 30px 25px; /* Reducimos un poco el espacio interno */
+    }
+}
+
+/* Para pantallas de celulares (menos de 480px) */
+@media (max-width: 480px) {
+    body {
+        align-items: flex-start; /* En celus es mejor que empiece desde arriba si hay scroll */
+        padding-top: 60px; /* Espacio para que el botón volver no estorbe */
+    }
+
+    .btn-volver {
+        top: -45px;
+        left: 10px;
+    }
+
+    .logo-container h1 {
+        font-size: 20px; /* Texto un cachito más pequeño */
+    }
+
+    .apple-logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .card {
+        padding: 20px 15px; /* Tarjeta más compacta */
+    }
+
+    .card-title {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .info-item {
+        gap: 12px; /* Juntamos un poquito más los iconos de los textos */
+    }
+
+    .icon-box {
+        width: 38px;
+        height: 38px; /* Iconos sutilmente más pequeños */
+    }
+
+    .icon-box .material-symbols-outlined {
+        font-size: 22px;
+    }
+
+    .info-text h3 {
+        font-size: 14px;
+    }
+
+    .info-text p {
+        font-size: 12px; /* Bajamos un punto la letra para que quepa todo */
+    }
+}

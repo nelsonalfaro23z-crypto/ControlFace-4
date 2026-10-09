@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControlFace - Registrar Personal</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Registrar Personal.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR EXACTO AL DASHBOARD -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="Logo.png" alt="Logo">
+            <div>
+                <h2>Control<span>face</span></h2>
+                <p>Sistema de Asistencia</p>
+            </div>
+        </div>
+
+        <ul class="menu">
+            <li>
+                <a href="Dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de Secciones.html">
+                    <i class="fa-solid fa-border-all"></i>
+                    Módulo de Secciones
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="Módulo de personal.html">
+                    <i class="fa-regular fa-user"></i>
+                    Módulo de Personal
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de Estudiantes.html">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Módulo de Estudiantes
+                </a>
+            </li>
+
+           <li>
+    <a href="Reportes.html">
+        <i class="fa-solid fa-chart-column"></i>
+        Reportes
+    </a>
+</li>
+
+ <li>
+                <a href="Selector de Clase.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Selector de la Clase
+                </a>
+            </li>
+
+
+           <li>
+                <a href="Selector de Seccion.html">
+                    <i class="fa-regular fa-file-lines"></i>
+                    Selector de Sección
+                </a>
+            </li>
+           
+        </ul>
+
+        <div class="user">
+            <i class="fa-regular fa-circle-user"></i>
+            <div>
+                <h4>Administrador</h4>
+                <span>Admin@clases.edu.sv</span>
+            </div>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main">
+
+        <!-- ENCABEZADO -->
+        <header>
+            <div class="header-left">
+                <button type="button" class="volver" onclick="window.location.href='Módulo de personal.html'">
+                    <i class="fa-solid fa-arrow-left"></i> Volver a Módulo de Personal
+                </button>
+
+                <h1>Registrar Personal</h1>
+                <p class="descripcion">Completa los datos para registrar un nuevo miembro del personal</p>
+            </div>
+
+            <div class="header-icons">
+                <i class="fa-regular fa-bell notificacion"></i>
+                <button type="button" class="btn-logout logout" onclick="cerrarSesion()">
+                    <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+                </button>
+            </div>
+        </header>
+
+        <!-- FORMULARIO CON CAJA MÁS AMPLIA VERTICALMENTE -->
+        <form id="formPersonal">
+
+            <div class="contenedor-formulario">
+
+                <!-- COLUMNA IZQUIERDA: DATOS GENERALES -->
+                <div class="datos-generales">
+                    <h3>Datos Generales</h3>
+
+                    <label>Nombre Completo</label>
+                    <input type="text" placeholder="Ej. Juan Pérez López" required>
+
+                    <label>DUI</label>
+                    <input type="text" placeholder="00000000 - 0">
+
+                    <div class="fila">
+                        <div>
+                            <label>Correo Electrónico</label>
+                            <input type="email" placeholder="ejemplo@clases.edu.sv">
+                        </div>
+
+                        <div>
+                            <label>Teléfono</label>
+                            <input type="text" placeholder="0000 - 0000">
+                        </div>
+                    </div>
+
+                    <label>Contraseña</label>
+                    <div class="password-box">
+                        <input type="password" id="password" placeholder="Ingrese la contraseña">
+                        <i class="fa-regular fa-eye"></i>
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA: TIPO DE USUARIO -->
+                <div class="tipo-usuario">
+                    <h3>Tipo de Usuario</h3>
+
+                    <label class="radio-option">
+                        <input type="radio" name="tipoUsuario" value="profesor" checked>
+                        <span>Profesor</span>
+                    </label>
+
+                    <label class="radio-option">
+                        <input type="radio" name="tipoUsuario" value="administrador">
+                        <span>Administrador</span>
+                    </label>
+                </div>
+
+                <!-- DATOS PROFESOR -->
+                <div class="profesor-box">
+                    <h4>Datos del Profesor</h4>
+
+                    <label>Especialidad</label>
+                    <select id="especialidad">
+                        <option value="">Seleccionar especialidad</option>
+                        <option value="Matemática">Matemática</option>
+                        <option value="Lenguaje">Lenguaje y Literatura</option>
+                        <option value="Ciencias">Ciencias Naturales</option>
+                        <option value="Sociales">Estudios Sociales</option>
+                        <option value="Ingles">Inglés</option>
+                        <option value="Informatica">Informática</option>
+                        <option value="EducacionFisica">Educación Física</option>
+                        <option value="Artistica">Educación Artística</option>
+                        <option value="Software">Técnico Vocacional en Desarrollo de Software</option>
+                        <option value="Contable">Técnico Vocacional Administrativo Contable</option>
+                    </select>
+
+                    <label>Turno</label>
+                    <select>
+                        <option value="">Seleccione turno</option>
+                        <option value="Matutino">Matutino</option>
+                        <option value="Vespertino">Vespertino</option>
+                    </select>
+                </div>
+
+                <!-- DATOS ADMINISTRADOR -->
+                <div class="admin-box">
+                    <h4>Datos del Administrador</h4>
+
+                    <label>Cargo Administrativo</label>
+                    <select>
+                        <option value="">Seleccionar cargo</option>
+                        <option value="Director">Director</option>
+                        <option value="Subdirector">Subdirector</option>
+                        <option value="Coordinador">Coordinador</option>
+                    </select>
+
+                    <label>Nivel de Acceso</label>
+                    <select>
+                        <option value="">Seleccionar nivel de acceso</option>
+                        <option value="Completo">Completo</option>
+                        <option value="Medio">Medio</option>
+                        <option value="Básico">Básico</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="botones">
+                <button type="button" class="cancelar" onclick="window.location.href='Gestión de Personal.html'">
+                    Cancelar
+                </button>
+
+                <button type="submit" class="guardar">
+                    Guardar Personal
+                </button>
+            </div>
+
+        </form>
+
+        <footer>
+            © ControlFace - Sistema de Asistencia con Reconocimiento Facial
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="Registrar Personal.js"></script>
+
+</body>
+</html>

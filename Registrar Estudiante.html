@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControlFace - Registro de Estudiante</title>
+
+    <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Registrar Estudiante.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR IGUAL AL DASHBOARD -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="Logo.png" alt="Logo">
+            <div>
+                <h2>Control<span>face</span></h2>
+                <p>Sistema de Asistencia</p>
+            </div>
+        </div>
+
+        <ul class="menu">
+            <li>
+                <a href="Dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de Secciones.html">
+                    <i class="fa-solid fa-border-all"></i>
+                    Módulo de Secciones
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de personal.html">
+                    <i class="fa-regular fa-user"></i>
+                    Módulo de Personal
+                </a>
+            </li>
+
+ <li>
+                <a href="Selector de Clase.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Selector de la Clase
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de Materias.html">
+                    <i class="fa-solid fa-border-all"></i>
+                    Módulo de Materias 
+                </a>
+            </li>            
+
+          
+            <li>
+    <a href="Reportes.html">
+        <i class="fa-solid fa-chart-column"></i>
+        Reportes
+    </a>
+</li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-regular fa-file-lines"></i>
+                    Selector de Sección
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-book-open"></i>
+                    Selector de la Clase
+                </a>
+            </li>
+        </ul>
+
+        <div class="user">
+            <i class="fa-regular fa-circle-user"></i>
+            <div>
+                <h4>Administrador</h4>
+                <span>Admin@clases.edu.sv</span>
+            </div>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main">
+
+        <!-- HEADER -->
+        <header>
+            <div class="header-left">
+                <button type="button" class="btn-volver" onclick="volverAlModulo()">
+                    <i class="fa-solid fa-arrow-left"></i> Volver a Módulo de Estudiantes
+                </button>
+                <h1>Registro de Estudiante</h1>
+                <div class="subtitulo-seccion">
+                    <span>1° General Sección "A"</span>
+                    <span class="badge-activa">• Activa</span>
+                </div>
+                <p class="instruccion">Completa los datos para registrar un nuevo estudiante</p>
+            </div>
+
+            <div class="header-icons">
+                <i class="fa-regular fa-bell"></i>
+                <button type="button" onclick="cerrarSesion()">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Cerrar Sesión
+                </button>
+            </div>
+        </header>
+
+        <!-- FORMULARIO EN 3 COLUMNAS -->
+        <form id="formRegistroEstudiante" onsubmit="event.preventDefault();">
+            <div class="cards-grid">
+
+                <!-- COLUMNA 1: DATOS PERSONALES -->
+                <div class="card-columna">
+                    <h2>Datos Personales</h2>
+
+                    <div class="form-group">
+                        <label>Nombre Completo</label>
+                        <input type="text" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Fecha de Nacimiento</label>
+                        <input type="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Género</label>
+                        <select required>
+                            <option value="" disabled selected>Seleccionar género</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Dirección</label>
+                        <input type="text" placeholder="Ej. San Juan La Ceiba, Ahuachapán">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Teléfono</label>
+                        <input type="text" placeholder="0000 - 0000">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Correo Electrónico</label>
+                        <input type="email" placeholder="Ej. ejemplo@gmail.com">
+                    </div>
+                </div>
+
+                <!-- COLUMNA 2: DATOS ACADÉMICOS -->
+                <div class="card-columna">
+                    <h2>Datos Académicos</h2>
+
+                    <div class="form-group">
+                        <label>Bachillerato</label>
+                        <select required>
+                            <option value="" disabled selected>Seleccionar bachillerato</option>
+                            <option value="General">General</option>
+                            <option value="Desarrollo de Software">Desarrollo de Software</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Año</label>
+                        <select required>
+                            <option value="" disabled selected>Seleccionar año</option>
+                            <option value="1">1° Año</option>
+                            <option value="2">2° Año</option>
+                            <option value="3">3° Año</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Sección</label>
+                        <select required>
+                            <option value="" disabled selected>Seleccionar sección</option>
+                            <option value="A">Sección A</option>
+                            <option value="B">Sección B</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Turno</label>
+                        <select required>
+                            <option value="" disabled selected>Seleccionar turno</option>
+                            <option value="Mañana">Mañana</option>
+                            <option value="Tarde">Tarde</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Estado</label>
+                        <select required>
+                            <option value="Activo" selected>Activo</option>
+                            <option value="Inactivo">Inactivo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- COLUMNA 3: RECONOCIMIENTO FACIAL -->
+                <div class="card-columna">
+                    <h2>Reconocimiento Facial</h2>
+
+                    <div class="camara-box">
+                        <div class="avatar-placeholder">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                    </div>
+
+                    <div class="camara-acciones">
+                        <button type="button" class="btn-camara azul">
+                            <i class="fa-solid fa-camera"></i> Capturar Foto
+                        </button>
+                        <button type="button" class="btn-camara outline">
+                            <i class="fa-solid fa-camera-retro"></i> Subir Imagen
+                        </button>
+                    </div>
+
+                    <div class="estado-facial-container">
+                        <label class="estado-titulo">Estado Facial</label>
+
+                        <div class="status-box verde">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Rostro Detectado</span>
+                        </div>
+
+                        <div class="status-box verde">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Descriptores Generados</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- BOTONES INFERIORES -->
+            <div class="form-footer">
+                <button type="button" class="btn-cancelar" onclick="volverAlModulo()">Cancelar</button>
+                <button type="submit" class="btn-guardar">Guardar Estudiante</button>
+            </div>
+        </form>
+
+        <footer>
+            © Controlface - Sistema de Asistencia con Reconocimiento Facial
+        </footer>
+
+    </main>
+
+    <script src="Módulo de Estudiantes.js"></script>
+</body>
+
+</html>

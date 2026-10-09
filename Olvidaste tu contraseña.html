@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Olvidaste tu contraseña? - ControlFace</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="Olvidaste tu contraseña.css">
+</head>
+<body>
+
+    <div class="split-container">
+        
+        <div class="left-banner">
+            <img src="Portada.jpeg" alt="Instituto Nacional Cornelio Azenón Sierra" class="banner-img">
+            <div class="overlay"></div>
+            <div class="banner-content">
+                <h1 class="brand-title">Control<span class="accent-text">Face</span></h1>
+                <p class="slogan">“Fácil, rápido y seguro: Así es ControlFace.”</p>
+            </div>
+        </div>
+
+        <div class="right-form">
+            <div class="form-wrapper">
+                
+                <h2 class="form-title">¿Olvidaste tu contraseña?</h2>
+                
+                <p class="form-description">
+                    Ingresa tu correo electrónico institucional abajo y te enviaremos un código de seguridad para restablecer tu cuenta.
+                </p>
+
+                <form id="recoveryForm" onsubmit="enviarCodigo(event)">
+                    
+                    <div class="input-group">
+                        <label for="email">Correo electrónico</label>
+                        <div class="input-container">
+                            <span class="material-symbols-outlined input-icon">mail</span>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                placeholder="20005593@clases.edu.sv" 
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="back-link-container">
+                        <a href="index.html" style="text-decoration: none;">
+                            <button type="button" class="btn-back">
+                                <span class="material-symbols-outlined">arrow_back</span>
+                                Volver al inicio de sesión
+                            </button>
+                        </a>
+                    </div>
+
+                    <div class="btn-container">
+                        <button type="submit" class="btn-submit">
+                            Enviar código de seguridad
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="Olvidaste tu contraseña.js"></script>
+</body>
+</html>

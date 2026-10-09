@@ -1,0 +1,292 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Roboto,sans-serif;
+}
+
+body{
+
+background:#0d0730;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+color:white;
+
+}
+
+.volver{
+
+position:absolute;
+
+left:40px;
+
+top:30px;
+
+text-decoration:none;
+
+color:white;
+
+font-size:18px;
+
+}
+
+.contenedor{
+    text-align: center;
+    width: 100%;
+}
+
+h1{
+
+font-size:42px;
+
+margin-bottom:10px;
+
+}
+
+.subtitulo{
+
+color:#bababa;
+
+margin-bottom:25px;
+
+}
+
+.logo{
+    display: block;
+    width: 70px;
+    height: auto;
+    margin: 0 auto 20px auto;
+}
+
+.card{
+
+width:500px;
+
+margin:auto;
+
+background:#2d2957;
+
+padding:40px;
+
+border-radius:10px;
+
+text-align:left;
+
+}
+
+.card h2{
+
+text-align:center;
+
+margin-bottom:15px;
+
+font-size:35px;
+
+}
+
+.card p{
+
+text-align:center;
+
+margin-bottom:25px;
+
+color:#cfcfcf;
+
+}
+
+label{
+
+display:block;
+
+margin-bottom:10px;
+
+}
+
+input{
+
+width:100%;
+
+height:48px;
+
+padding:12px;
+
+background:#413d67;
+
+border:none;
+
+border-radius:6px;
+
+color:white;
+
+font-size:16px;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+input:focus{
+
+border:2px solid #8b3dff;
+
+}
+
+.links{
+
+margin-top:25px;
+
+}
+
+.links a{
+
+display:block;
+
+text-decoration:none;
+
+color:white;
+
+margin-top:15px;
+
+}
+
+.links span{
+
+color:#7e4dff;
+
+}
+
+button{
+
+margin-top:80px;
+
+float:right;
+
+width:150px;
+
+height:48px;
+
+border:none;
+
+border-radius:8px;
+
+background:#8b3dff;
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+background:#7130e8;
+
+}
+
+@media(max-width:768px){
+
+.card{
+
+width:90%;
+
+padding:25px;
+
+}
+
+h1{
+
+font-size:30px;
+
+}
+
+.card h2{
+
+font-size:28px;
+
+}
+
+button{
+
+width:100%;
+
+float:none;
+
+margin-top:40px;
+
+}
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%; /* Dejamos un margen a los lados */
+    }
+    
+    .card {
+        padding: 30px 25px; /* Reducimos un poco el espacio interno */
+    }
+}
+
+/* Para pantallas de celulares (menos de 480px) */
+@media (max-width: 480px) {
+    body {
+        align-items: flex-start; /* En celus es mejor que empiece desde arriba si hay scroll */
+        padding-top: 60px; /* Espacio para que el botón volver no estorbe */
+    }
+
+    .btn-volver {
+        top: -45px;
+        left: 10px;
+    }
+
+    .logo-container h1 {
+        font-size: 20px; /* Texto un cachito más pequeño */
+    }
+
+    .apple-logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .card {
+        padding: 20px 15px; /* Tarjeta más compacta */
+    }
+
+    .card-title {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .info-item {
+        gap: 12px; /* Juntamos un poquito más los iconos de los textos */
+    }
+
+    .icon-box {
+        width: 38px;
+        height: 38px; /* Iconos sutilmente más pequeños */
+    }
+
+    .icon-box .material-symbols-outlined {
+        font-size: 22px;
+    }
+
+    .info-text h3 {
+        font-size: 14px;
+    }
+
+    .info-text p {
+        font-size: 12px; /* Bajamos un punto la letra para que quepa todo */
+    }
+}

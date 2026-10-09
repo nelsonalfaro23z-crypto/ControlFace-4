@@ -1,0 +1,255 @@
+/*==========================================================
+  IMPORTA DIRECTAMENTE LOS ESTILOS DEL DASHBOARD
+==========================================================*/
+@import url('Dashboard.css');
+
+/* =========================
+   AJUSTE DE PANTALLA GENERAL
+========================= */
+body {
+    background: #d4d4d8;
+    overflow-x: hidden;
+}
+
+.main {
+    margin-left: 310px;
+    width: calc(100% - 280px);
+    padding: 22px 30px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+form#formPersonal {
+    width: 100%;
+}
+
+/* =========================
+   HEADER Y BOTÓN VOLVER
+========================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 18px;
+    width: 100%;
+    max-width: 100%; /* Garantiza que no se estire más que el formulario */
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.descripcion {
+    color: #4b5563;
+    margin-top: 2px;
+    font-size: 14px;
+}
+
+.volver {
+    border: none;
+    background: #2b3ced;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all .3s ease;
+}
+
+.volver:hover {
+    background: #1d29bc;
+    transform: translateX(-4px);
+}
+
+/* =========================
+   CONTENEDOR FORMULARIO
+========================= */
+.contenedor-formulario {
+    background: #ffffff;
+    border: 1px solid #c7d2fe;
+    border-radius: 25px;
+    padding: 35px 25px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .05);
+    width: 100%; /* Toma exactamente el mismo ancho que el header */
+    box-sizing: border-box; /* Evita desbordamientos por padding */
+}
+
+.datos-generales {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.datos-generales h3 {
+    color: #080133;
+    font-size: 17px;
+    margin-bottom: 6px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1f2937; /* Color oscuro claro para mejor lectura */
+}
+
+input, select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: white;
+    font-size: 13px;
+    color: #111827;
+    outline: none;
+    transition: border-color .2s;
+}
+
+input:focus, select:focus {
+    border-color: #2b3ced;
+}
+
+.fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.password-box {
+    position: relative;
+}
+
+.password-box i {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* =========================
+   TIPO DE USUARIO Y SECCIONES
+========================= */
+.tipo-usuario {
+    border-left: 1px solid #e5e7eb;
+    padding-left: 25px;
+}
+
+.tipo-usuario h3 {
+    color: #080133;
+    font-size: 17px;
+    margin-bottom: 14px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.radio-option input {
+    width: auto;
+}
+
+.profesor-box, .admin-box {
+    border-radius: 14px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 1 !important; /* Fuerza la opacidad normal al 100% */
+}
+
+.profesor-box {
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+}
+
+.profesor-box h4, .admin-box h4 {
+    color: #2b3ced;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.admin-box {
+    background: #eef2ff;
+    border: 1px solid #c7d2fe;
+}
+
+/* =========================
+   BOTONES Y FOOTER
+========================= */
+.botones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+}
+
+.cancelar {
+    background: white;
+    color: #2b3ced;
+    border: 1px solid #2b3ced;
+    padding: 12px 26px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.guardar {
+    background: #080133;
+    color: white;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.cancelar:hover {
+    background: #f3f4f6;
+}
+
+.guardar:hover {
+    background: #181156;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #6b7280;
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 1000px) {
+    .contenedor-formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .tipo-usuario {
+        border-left: none;
+        padding-left: 0;
+    }
+}
+
+@media(max-width: 768px) {
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+}

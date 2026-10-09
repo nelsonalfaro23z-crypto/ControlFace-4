@@ -1,0 +1,198 @@
+/*==========================================================
+  IMPORTA DIRECTAMENTE LOS ESTILOS BASE DEL DASHBOARD
+==========================================================*/
+@import url('Dashboard.css');
+
+/*==========================================================
+  HEADER Y ACCIONES DERECHA
+==========================================================*/
+.header-sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.header-sec h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.header-sec p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.header-right .fa-bell {
+    font-size: 18px;
+    color: #1f2937;
+    cursor: pointer;
+}
+
+.btn-logout {
+    background: #ffffff;
+    color: #812492;
+    border: 1px solid #e5e7eb;
+    padding: 9px 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn-logout:hover {
+    background: #f8fafc;
+}
+
+/*==========================================================
+  BARRA BÚSQUEDA Y FILTRO
+==========================================================*/
+.search-bar-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.input-search {
+    flex: 1;
+    background: #080133;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 1px solid #1c154c;
+}
+
+.input-search i {
+    color: #9ca3af;
+    font-size: 15px;
+}
+
+.input-search input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 14px;
+    width: 100%;
+}
+
+.input-search input::placeholder {
+    color: #9ca3af;
+}
+
+.btn-filtrar {
+    background: #080133;
+    color: #ffffff;
+    border: 1px solid #1c154c;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: .3s;
+}
+
+.btn-filtrar:hover {
+    background: #140854;
+}
+
+/*==========================================================
+  GRID DE TARJETAS DE SECCIONES
+==========================================================*/
+.secciones-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.card-seccion {
+    background: #080133;
+    border-radius: 16px;
+    padding: 24px;
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+}
+
+/* BORDES SUPERIORES DE COLOR */
+.card-seccion.blue { border-top: 4px solid #3b82f6; }
+.card-seccion.green { border-top: 4px solid #22c55e; }
+.card-seccion.purple { border-top: 4px solid #a855f7; }
+.card-seccion.yellow { border-top: 4px solid #f59e0b; }
+
+.card-seccion h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.card-seccion p {
+    font-size: 13px;
+    color: #9ca3af;
+    margin-bottom: 20px;
+}
+
+.seccion-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.seccion-info span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #d1d5db;
+}
+
+.seccion-info span i {
+    width: 16px;
+    color: #9ca3af;
+}
+
+.btn-seleccionar {
+    background: #2b3ced;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: .3s;
+    margin-top: auto;
+}
+
+.btn-seleccionar:hover {
+    background: #1e2bc0;
+}
+
+/* RESPONSIVE */
+@media(max-width: 992px) {
+    .secciones-grid {
+        grid-template-columns: 1fr;
+    }
+}

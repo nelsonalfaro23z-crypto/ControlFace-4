@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Nueva Contraseña - ControlFace</title>
+    <!-- Íconos de Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="Crear tu nueva contraseña.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sección Izquierda: Banner INCAS -->
+        <div class="left-side">
+            <h1 class="brand-title">Control<span class="accent-text">Face</span></h1>
+            <p class="slogan">“Fácil, rápido y seguro: Así es ControlFace.”</p>
+        </div>
+
+        <!-- Sección Derecha: Formulario -->
+        <div class="right-side">
+            <div class="right-side-wrapper">
+                <h2 class="form-title">Crear tu nueva contraseña</h2>
+                <p class="form-description">
+                    Escribe una contraseña segura que no uses en otros sitios. Debe tener al menos 8 caracteres.
+                </p>
+
+                <form id="newPasswordForm">
+                    <!-- Nueva Contraseña -->
+                    <div class="input-group">
+                        <label for="password">Nueva Contraseña</label>
+                        <div class="input-container">
+                            <span class="material-symbols-outlined">lock</span>
+                            <input type="password" id="password" required minlength="8" placeholder="••••••••">
+                        </div>
+                    </div>
+
+                    <!-- Confirmar Contraseña -->
+                    <div class="input-group">
+                        <label for="confirmPassword">Confirmar nueva contraseña</label>
+                        <div class="input-container">
+                            <span class="material-symbols-outlined">lock</span>
+                            <input type="password" id="confirmPassword" required minlength="8" placeholder="••••••••">
+                        </div>
+                    </div>
+
+                    <!-- Botón Morado de Restablecer -->
+                    <button type="submit" class="btn-submit">Restablecer Contraseña</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="Crear tu nueva contraseña.js"></script>
+</body>
+</html>

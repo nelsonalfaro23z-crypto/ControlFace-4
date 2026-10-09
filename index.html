@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControlFace</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <!-- Panel Izquierdo -->
+
+    <div class="izquierda">
+
+        <img src="Portada.jpeg" alt="INCAS">
+
+        <div class="texto">
+
+            <h1>
+                <span class="morado">Control</span><span class="azul">Face</span>
+            </h1>
+
+            <h2>
+                “Fácil, rápido y seguro:<br>
+                Así es ControlFace.”
+            </h2>
+
+        </div>
+
+    </div>
+
+    <!-- Panel Derecho -->
+
+    <div class="derecha">
+
+    <div class="logo">
+        <img src="logo.png" alt="ControlFace">
+    </div>
+
+    <h1>¡BIENVENIDOS!</h1>
+
+        <p>
+            Ingresá tus credenciales institucionales
+            <br>
+            para acceder:
+        </p>
+
+        <form action="Dashboard.html">
+
+            <label>Correo electrónico</label>
+
+            <div class="input">
+
+                <input
+                    type="email"
+                    placeholder="NIE@clases.edu.sv" required>
+
+            </div>
+
+            <label>Contraseña</label>
+
+            <div class="input password">
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Ingresa tu contraseña" required>
+
+                <i class="fa-solid fa-eye" id="togglePassword"></i>
+
+            </div>
+
+            <a href="Olvidaste tu contraseña.html">¿Olvidaste tu contraseña?</a> 
+
+            <!-- Redirección al Dashboard -->
+            <button type="submit">
+                ➜ Iniciar Sesión
+            </button>
+
+        </form>
+
+        <div class="linea">
+
+            <div></div>
+
+            <span>O iniciar con:</span>
+
+            <div></div>
+
+        </div>
+
+        <div class="redes">
+            <a href="google.html" style="text-decoration: none;">
+                <button type="button">
+                    <i class="fab fa-google"></i>
+                </button>
+            </a>
+
+            <a href="microsoft.html" style="text-decoration: none;">
+                <button type="button">
+                    <i class="fab fa-microsoft"></i>
+                </button>
+            </a>
+
+            <a href="apple.html" style="text-decoration: none;">
+                <button type="button">
+                    <i class="fab fa-apple"></i>
+                </button>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

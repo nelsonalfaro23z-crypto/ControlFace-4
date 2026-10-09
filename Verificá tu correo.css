@@ -1,0 +1,238 @@
+/* ==========================================================================
+   ESTILOS BASE
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #050212; 
+    color: #ffffff;
+    min-height: 100vh;
+    display: block;
+}
+
+.split-container {
+    display: table;
+    width: 100%;
+    min-height: 100vh;
+    table-layout: fixed;
+}
+
+/* ==========================================================================
+   COLUMNA IZQUIERDA (BANNER FOTO INCAS)
+   ========================================================================== */
+.left-banner {
+    display: table-cell;
+    width: 50%;
+    position: relative;
+    vertical-align: middle;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+.left-banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(16, 12, 46, 0.85), rgba(5, 2, 18, 0.9));
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.brand-title {
+    font-size: 56px;
+    font-weight: 800;
+    color: #8b5cf6; 
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.brand-title .accent-text {
+    color: #3b2d7d; 
+}
+
+.slogan {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #ffffff;
+    opacity: 0.95;
+}
+
+/* ==========================================================================
+   COLUMNA DERECHA (FORMULARIO CÓDIGO)
+   ========================================================================== */
+.right-form {
+    display: table-cell;
+    width: 50%;
+    background-color: #060317; 
+    vertical-align: middle;
+    padding: 60px 40px;
+}
+
+.form-wrapper {
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+.form-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.form-description {
+    font-size: 16px;
+    color: #d1d1d6;
+    line-height: 1.5;
+    margin-bottom: 35px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 15px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #636366;
+    font-size: 20px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 16px 16px 16px 45px;
+    background-color: #1c1930; 
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 2px; /* Espaciado sutil para que los números no se amontonen */
+    outline: none;
+}
+
+.input-container input:focus {
+    background-color: #25213b;
+}
+
+.input-container input::placeholder {
+    color: #48484a;
+    letter-spacing: normal;
+}
+
+/* Enlace Volver */
+.back-link-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.btn-back {
+    background: none;
+    border: none;
+    color: #7c4dff; 
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: opacity 0.2s;
+}
+
+.btn-back:hover {
+    opacity: 0.8;
+}
+
+.btn-back .material-symbols-outlined {
+    font-size: 16px;
+}
+
+/* Botón Enviar */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #7c3aed; 
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #6d28d9;
+}
+
+/* ==========================================================================
+   SISTEMA RESPONSIVE 
+   ========================================================================== */
+@media (max-width: 900px) {
+    .split-container {
+        display: block;
+    }
+
+    .left-banner, .right-form {
+        display: block;
+        width: 100%;
+    }
+
+    .left-banner {
+        padding: 60px 20px;
+        min-height: 35vh;
+    }
+
+    .brand-title {
+        font-size: 42px;
+    }
+
+    .slogan {
+        font-size: 20px;
+    }
+
+    .right-form {
+        padding: 40px 20px;
+    }
+}

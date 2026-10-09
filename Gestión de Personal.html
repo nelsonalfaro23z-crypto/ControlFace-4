@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControlFace - Gestión de Personal</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Gestión de Personal.css">
+</head>
+<body>
+
+    <!-- SIDEBAR IGUAL AL DASHBOARD -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="Logo.png" alt="Logo">
+            <div>
+                <h2>Control<span>face</span></h2>
+                <p>Sistema de Asistencia</p>
+            </div>
+        </div>
+
+        <ul class="menu">
+            <li>
+                <a href="Dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de Secciones.html">
+                    <i class="fa-solid fa-border-all"></i>
+                    Módulo de Secciones
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="Módulo de personal.html">
+                    <i class="fa-regular fa-user"></i>
+                    Módulo de Personal
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de Estudiantes.html">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Módulo de Estudiantes
+                </a>
+            </li>
+
+            <li>
+                <a href="Reportes.html">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Reportes
+                </a>
+            </li>
+
+ <li>
+                <a href="Selector de Clase.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Selector de la Clase
+                </a>
+            </li>
+
+           <li>
+                <a href="Selector de Seccion.html">
+                    <i class="fa-regular fa-file-lines"></i>
+                    Selector de Sección
+                </a>
+            </li>
+           
+
+        <div class="user">
+            <i class="fa-regular fa-circle-user"></i>
+            <div>
+                <h4>Administrador</h4>
+                <span>Admin@clases.edu.sv</span>
+            </div>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main">
+
+        <header>
+            <div>
+                <button class="volver" onclick="window.location.href='Módulo de personal.html'">
+                    <i class="fa-solid fa-arrow-left"></i> Volver a Módulo de Personal
+                </button>
+                <h1>Gestión de Personal</h1>
+                <p class="descripcion">Gestiona la información del personal del sistema</p>
+            </div>
+
+            <div class="header-icons">
+                <i class="fa-regular fa-bell notificacion"></i>
+                <button type="button" class="btn-logout logout" onclick="cerrarSesion()">
+                    <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+                </button>
+            </div>
+        </header>
+
+        <div class="top-info">
+            <div class="seccion">
+                <strong>Personal Registrado</strong>
+            </div>
+
+            <button id="btnAgregar" onclick="window.location.href='Registrar Personal.html'">
+                <i class="fa-solid fa-user-plus"></i> Nuevo Personal
+            </button>
+        </div>
+
+        <!-- TARJETAS SUPERIORES COMPACTAS -->
+        <section class="stats">
+            <div class="card">
+                <div class="icono-card profesores">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Total Profesores</h3>
+                    <h2>28</h2>
+                    <a href="#">Ver detalles</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="icono-card administradores">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Total Administradores</h3>
+                    <h2>8</h2>
+                    <a href="#">Ver detalles</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="icono-card activos">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Personal Activo</h3>
+                    <h2>32</h2>
+                    <a href="#">Ver detalles</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="icono-card inactivos">
+                    <i class="fa-solid fa-user-xmark"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Personal Inactivo</h3>
+                    <h2>4</h2>
+                    <a href="#">Ver detalles</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="main-grid">
+
+            <section class="tabla-section">
+                <div class="filtros">
+                    <div class="buscador">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="busqueda" placeholder="Buscar Personal...">
+                    </div>
+
+                    <select id="filtroCargo">
+                        <option value="todos">Todos los cargos</option>
+                        <option value="profesor">Profesor</option>
+                        <option value="administrador">Administrador</option>
+                    </select>
+
+                    <button class="btn-filtro">
+                        <i class="fa-solid fa-filter"></i> Filtros
+                    </button>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>Foto</th>
+                            <th>Nombre</th>
+                            <th>Cargo</th>
+                            <th>Correo</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaPersonal">
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <div class="foto-perfil">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                            </td>
+                            <td>Carlos Ramírez</td>
+                            <td>Profesor</td>
+                            <td>c.ramirez@clases.edu.sv</td>
+                            <td><span class="activo">Activo</span></td>
+                            <td>
+                                <div class="acciones">
+                                    <button class="editar"><i class="fa-solid fa-pen"></i></button>
+                                    <button class="eliminar"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>
+                                <div class="foto-perfil">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                            </td>
+                            <td>Maria F. Gómez</td>
+                            <td>Profesora</td>
+                            <td>m.gomez@clases.edu.sv</td>
+                            <td><span class="activo">Activo</span></td>
+                            <td>
+                                <div class="acciones">
+                                    <button class="editar"><i class="fa-solid fa-pen"></i></button>
+                                    <button class="eliminar"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>
+                                <div class="foto-perfil">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                            </td>
+                            <td>Juan P. López</td>
+                            <td>Administrador</td>
+                            <td>j.lopez@clases.edu.sv</td>
+                            <td><span class="activo">Activo</span></td>
+                            <td>
+                                <div class="acciones">
+                                    <button class="editar"><i class="fa-solid fa-pen"></i></button>
+                                    <button class="eliminar"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>
+                                <div class="foto-perfil">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                            </td>
+                            <td>Lucía A. Martínez</td>
+                            <td>Profesora</td>
+                            <td>l.martinez@clases.edu.sv</td>
+                            <td><span class="inactivo">Inactivo</span></td>
+                            <td>
+                                <div class="acciones">
+                                    <button class="editar"><i class="fa-solid fa-pen"></i></button>
+                                    <button class="eliminar"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>
+                                <div class="foto-perfil">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                            </td>
+                            <td>Roberto A. Silva</td>
+                            <td>Administrador</td>
+                            <td>r.silva@clases.edu.sv</td>
+                            <td><span class="activo">Activo</span></td>
+                            <td>
+                                <div class="acciones">
+                                    <button class="editar"><i class="fa-solid fa-pen"></i></button>
+                                    <button class="eliminar"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="footer-tabla">
+                    <span class="info-registros">Mostrando 1 a 5 de 35 registros</span>
+                    <div class="paginacion">
+                        <button><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="pagina-activa">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <button>5</button>
+                        <span>...</span>
+                        <button><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                    <select class="registros-pagina">
+                        <option>5 por página</option>
+                        <option>10 por página</option>
+                        <option>20 por página</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- ACTIVIDAD RECIENTE -->
+            <section class="actividad">
+                <h3>Actividad Reciente</h3>
+
+                <div class="actividad-item">
+                    <div class="actividad-icon profesor">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </div>
+                    <div>
+                        <strong>Profesor agregado</strong>
+                        <p>Carlos Ramírez</p>
+                        <small>Hoy, 08:15 AM</small>
+                    </div>
+                </div>
+
+                <div class="actividad-item">
+                    <div class="actividad-icon admin">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <div>
+                        <strong>Administradora Agregada</strong>
+                        <p>María F. Gómez</p>
+                        <small>Ayer, 03:30 PM</small>
+                    </div>
+                </div>
+
+                <div class="actividad-item">
+                    <div class="actividad-icon desactivado">
+                        <i class="fa-solid fa-user-large-slash"></i>
+                    </div>
+                    <div>
+                        <strong>Usuario Desactivado</strong>
+                        <p>Lucía A. Martínez</p>
+                        <small>Ayer, 11:45 AM</small>
+                    </div>
+                </div>
+
+                <div class="actividad-item">
+                    <div class="actividad-icon profesor">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <div>
+                        <strong>Profesor Agregado</strong>
+                        <p>Roberto A. Silva</p>
+                        <small>12/05/2026</small>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <footer>
+            © ControlFace - Sistema de Asistencia con Reconocimiento Facial
+        </footer>
+
+    </main>
+
+    <script src="Gestión de Personal.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControlFace - Módulo de Secciones</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Módulo de Secciones.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="Logo.png" alt="Logo">
+            <div>
+                <h2>Control<span>face</span></h2>
+                <p>Sistema de Asistencia</p>
+            </div>
+        </div>
+
+        <ul class="menu">
+            <li>
+                <a href="Dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="Módulo de Secciones.html">
+                    <i class="fa-solid fa-border-all"></i>
+                    Módulo de Secciones
+                </a>
+            </li>
+
+            <li>
+                <a href="Módulo de personal.html">
+                    <i class="fa-regular fa-user"></i>
+                    Módulo de Personal
+                </a>
+            </li>
+
+ <li>
+                <a href="Módulo de Materias.html">
+                    <i class="fa-solid fa-border-all"></i>
+                    Módulo de Materias 
+                </a>
+            </li>            
+
+
+           
+          <li>
+                <a href="Módulo de Estudiantes.html">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Módulo de Estudiantes
+                </a>
+            </li>
+
+           <li>
+    <a href="Reportes.html">
+        <i class="fa-solid fa-chart-column"></i>
+        Reportes
+    </a>
+
+ <li>
+                <a href="Selector de Clase.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Selector de la Clase
+                </a>
+            </li>
+
+</li>
+
+            <li>
+                <a href="#">
+                    <i class="fa-regular fa-file-lines"></i>
+                    Selector de Sección
+                </a>
+            </li>
+
+            
+        </ul>
+
+        <div class="user">
+            <i class="fa-regular fa-circle-user"></i>
+            <div>
+                <h4>Administrador</h4>
+                <span>Admin@clases.edu.sv</span>
+            </div>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main">
+
+        <!-- HEADER -->
+        <header>
+            <div>
+                <h1>Módulo de Secciones</h1>
+                <p>Gestiona los datos, años y secciones académicas existentes en el sistema</p>
+            </div>
+
+            <div class="header-icons">
+                <i class="fa-regular fa-bell"></i>
+                <button type="button" id="btnCerrarSesion">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Cerrar Sesión
+                </button>
+            </div>
+        </header>
+
+        <!-- TARJETAS DE MÉTRICAS (SIN GRÁFICAS SVG) -->
+        <section class="cards-dark">
+            <div class="card-dark card-purple">
+                <div class="card-icon">
+                    <i class="fa-solid fa-border-all"></i>
+                </div>
+                <div class="card-info">
+                    <span>Total Secciones</span>
+                    <h2>28</h2>
+                    <small>Secciones registradas</small>
+                </div>
+            </div>
+
+            <div class="card-dark card-green">
+                <div class="card-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="card-info">
+                    <span>Grados Activos</span>
+                    <h2>6</h2>
+                    <small>Grados disponibles</small>
+                </div>
+            </div>
+
+            <div class="card-dark card-blue">
+                <div class="card-icon">
+                    <i class="fa-solid fa-cube"></i>
+                </div>
+                <div class="card-info">
+                    <span>Aulas Disponibles</span>
+                    <h2>14</h2>
+                    <small>Aulas libres</small>
+                </div>
+            </div>
+
+            <div class="card-dark card-orange">
+                <div class="card-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <div class="card-info">
+                    <span>Profesores Asignados</span>
+                    <h2>38</h2>
+                    <small>En secciones</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTENEDOR DE TABLA -->
+        <section class="table-container">
+            <!-- BARRA DE HERRAMIENTAS Y BÚSQUEDA -->
+            <div class="table-toolbar">
+                <div class="toolbar-left">
+                    <button class="btn-agregar" id="btnAgregar">
+                        <i class="fa-solid fa-plus"></i> Agregar sección
+                    </button>
+                    <select class="select-filtro" id="filtroGrados">
+                        <option value="todos">Todos los Grados</option>
+                        <option value="1">1° Año</option>
+                        <option value="2">2° Año</option>
+                        <option value="3">3° Año</option>
+                    </select>
+                </div>
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="inputBuscar" placeholder="Buscar sección, grado, turno....">
+                </div>
+            </div>
+
+            <!-- TABLA DE SECCIONES -->
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>GRADO</th>
+                            <th>SECCIÓN</th>
+                            <th>AÑO</th>
+                            <th>TURNO</th>
+                            <th>ENCARGADO</th>
+                            <th>ESTADO</th>
+                            <th>ACCIONES</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaSeccionesBody">
+                        <tr>
+                            <td>001</td>
+                            <td>1°</td>
+                            <td>A</td>
+                            <td>2026</td>
+                            <td>Mañana</td>
+                            <td>Maria Lopez</td>
+                            <td><span class="badge badge-activa">• Activa</span></td>
+                            <td class="acciones">
+                                <button class="btn-ver" title="Ver"><i class="fa-regular fa-eye"></i></button>
+                                <button class="btn-editar" title="Editar"><i class="fa-solid fa-pen"></i></button>
+                                <button class="btn-eliminar" title="Eliminar"><i class="fa-regular fa-trash-can"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>2°</td>
+                            <td>G</td>
+                            <td>2026</td>
+                            <td>Tarde</td>
+                            <td>Jesus Ortíz</td>
+                            <td><span class="badge badge-activa">• Activa</span></td>
+                            <td class="acciones">
+                                <button class="btn-ver" title="Ver"><i class="fa-regular fa-eye"></i></button>
+                                <button class="btn-editar" title="Editar"><i class="fa-solid fa-pen"></i></button>
+                                <button class="btn-eliminar" title="Eliminar"><i class="fa-regular fa-trash-can"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>2°</td>
+                            <td>D</td>
+                            <td>2026</td>
+                            <td>Mañana</td>
+                            <td>Hilda Zorneta</td>
+                            <td><span class="badge badge-activa">• Activa</span></td>
+                            <td class="acciones">
+                                <button class="btn-ver" title="Ver"><i class="fa-regular fa-eye"></i></button>
+                                <button class="btn-editar" title="Editar"><i class="fa-solid fa-pen"></i></button>
+                                <button class="btn-eliminar" title="Eliminar"><i class="fa-regular fa-trash-can"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>004</td>
+                            <td>2°</td>
+                            <td>K</td>
+                            <td>2026</td>
+                            <td>Tarde</td>
+                            <td>Cindy Castaneda</td>
+                            <td><span class="badge badge-activa">• Activa</span></td>
+                            <td class="acciones">
+                                <button class="btn-ver" title="Ver"><i class="fa-regular fa-eye"></i></button>
+                                <button class="btn-editar" title="Editar"><i class="fa-solid fa-pen"></i></button>
+                                <button class="btn-eliminar" title="Eliminar"><i class="fa-regular fa-trash-can"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>005</td>
+                            <td>1°</td>
+                            <td>L</td>
+                            <td>2026</td>
+                            <td>Mañana</td>
+                            <td>Moises López</td>
+                            <td><span class="badge badge-activa">• Activa</span></td>
+                            <td class="acciones">
+                                <button class="btn-ver" title="Ver"><i class="fa-regular fa-eye"></i></button>
+                                <button class="btn-editar" title="Editar"><i class="fa-solid fa-pen"></i></button>
+                                <button class="btn-eliminar" title="Eliminar"><i class="fa-regular fa-trash-can"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>006</td>
+                            <td>2°</td>
+                            <td>B</td>
+                            <td>2026</td>
+                            <td>Tarde</td>
+                            <td>Junior García</td>
+                            <td><span class="badge badge-activa">• Activa</span></td>
+                            <td class="acciones">
+                                <button class="btn-ver" title="Ver"><i class="fa-regular fa-eye"></i></button>
+                                <button class="btn-editar" title="Editar"><i class="fa-solid fa-pen"></i></button>
+                                <button class="btn-eliminar" title="Eliminar"><i class="fa-regular fa-trash-can"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>007</td>
+                            <td>3°</td>
+                            <td>M</td>
+                            <td>2026</td>
+                            <td>Mañana</td>
+                            <td>Reynaldo Morales</td>
+                            <td><span class="badge badge-activa">• Activa</span></td>
+                            <td class="acciones">
+                                <button class="btn-ver" title="Ver"><i class="fa-regular fa-eye"></i></button>
+                                <button class="btn-editar" title="Editar"><i class="fa-solid fa-pen"></i></button>
+                                <button class="btn-eliminar" title="Eliminar"><i class="fa-regular fa-trash-can"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- PAGINACIÓN -->
+            <div class="table-pagination">
+                <span class="pagination-info">Mostrando 1-7 de 28 secciones</span>
+                <div class="pagination-controls">
+                    <button class="btn-page"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="btn-page active">1</button>
+                    <button class="btn-page">2</button>
+                    <button class="btn-page">3</button>
+                    <button class="btn-page">4</button>
+                    <button class="btn-page"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <i class="fa-regular fa-copyright"></i> Controlface - Sistema de Asistencia con Reconocimiento Facial
+        </footer>
+
+    </main>
+
+    <script src="Módulo de Secciones.js"></script>
+</body>
+
+</html>

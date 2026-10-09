@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControlFace - Control y Búsqueda de Estudiantes</title>
+
+    <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Buscar Estudiantes.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <img src="Logo.png" alt="ControlFace">
+                <div>
+                    <h2>Control<span>face</span></h2>
+                    <p>Sistema de Asistencia</p>
+                </div>
+            </div>
+
+            <ul class="menu">
+                <li>
+                    <a href="Dashboard.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Módulo de Secciones.html">
+                        <i class="fa-solid fa-border-all"></i>
+                        <span>Módulo de Secciones</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Módulo de personal.html">
+                        <i class="fa-regular fa-user"></i>
+                        <span>Módulo de Personal</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Módulo de Materias.html">
+                        <i class="fa-solid fa-border-all"></i>
+                        <span>Módulo de Materias</span>
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="Módulo de Estudiantes.html">
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <span>Módulo de<br>Estudiantes</span>
+                    </a>
+                </li>
+
+                <li>
+    <a href="Reportes.html">
+        <i class="fa-solid fa-chart-column"></i>
+        Reportes
+    </a>
+
+ <li>
+                <a href="Selector de Clase.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Selector de la Clase
+                </a>
+            </li>
+
+</li>
+
+                <li>
+                <a href="Selector de Seccion.html">
+                    <i class="fa-regular fa-file-lines"></i>
+                    Selector de Sección
+                </a>
+            </li>
+           
+            </ul>
+
+            <div class="user">
+                <i class="fa-regular fa-circle-user"></i>
+                <div>
+                    <h4>Administrador</h4>
+                    <span>Admin@clases.edu.sv</span>
+                </div>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenido">
+
+            <header>
+                <div>
+                    <button class="volver" onclick="volverAlModulo()">
+    <i class="fa-solid fa-arrow-left"></i> Volver al Módulo
+</button>
+
+                    <h1>Control y Búsqueda de Estudiantes</h1>
+                    <p class="descripcion">
+                        Busca y administra la información de los estudiantes
+                    </p>
+                </div>
+
+                <div class="header-right">
+                    <button class="notificacion">
+                        <i class="fa-regular fa-bell"></i>
+                    </button>
+
+                    <button class="cerrar-sesion logout">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Cerrar Sesión
+                    </button>
+                </div>
+            </header>
+
+            <!-- TARJETAS SUPERIORES -->
+            <section class="stats">
+                <div class="card">
+                    <div class="icono-card estudiantes">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <div>
+                        <h3>Total Estudiantes</h3>
+                        <h2>35</h2>
+                        <a href="#">Ver detalles</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="icono-card activos">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+                    <div>
+                        <h3>Estudiantes Activos</h3>
+                        <h2>32</h2>
+                        <a href="#">Ver detalles</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="icono-card inactivos">
+                        <i class="fa-solid fa-user-large-slash"></i>
+                    </div>
+                    <div>
+                        <h3>Estudiantes Inactivos</h3>
+                        <h2>3</h2>
+                        <a href="#">Ver detalles</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="icono-card secciones">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+                    <div>
+                        <h3>Secciones</h3>
+                        <h2>6</h2>
+                        <a href="#">Ver detalles</a>
+                    </div>
+                </div>
+            </section>
+
+            <div class="main-grid">
+
+                <!-- TABLA Y BUSCADOR -->
+                <section class="tabla-section">
+
+                    <div class="filtros">
+                        <div class="titulo-busqueda">
+                            Buscar Estudiante
+                        </div>
+
+                        <div class="buscador">
+                            <input type="text" id="busqueda" placeholder="Buscar por nombre, carnet, código...">
+                        </div>
+
+                        <button class="btn-filtro" id="btnBuscar">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            Buscar
+                        </button>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>N°</th>
+                                <th>Foto</th>
+                                <th>Carnet</th>
+                                <th>Nombre</th>
+                                <th>Año</th>
+                                <th>Sección</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tablaEstudiantes">
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <div class="foto-perfil">
+                                        <i class="fa-solid fa-user"></i>
+                                    </div>
+                                </td>
+                                <td>2025001</td>
+                                <td>Juan Pérez López</td>
+                                <td>1°</td>
+                                <td>A</td>
+                                <td><span class="activo">Activo</span></td>
+                                <td>
+                                    <div class="acciones">
+                                        <button class="ver"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="editar"><i class="fa-solid fa-pen"></i></button>
+                                        <button class="eliminar"><i class="fa-solid fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>
+                                    <div class="foto-perfil">
+                                        <i class="fa-solid fa-user"></i>
+                                    </div>
+                                </td>
+                                <td>2025002</td>
+                                <td>María Fernanda Gómez</td>
+                                <td>1°</td>
+                                <td>A</td>
+                                <td><span class="activo">Activo</span></td>
+                                <td>
+                                    <div class="acciones">
+                                        <button class="ver"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="editar"><i class="fa-solid fa-pen"></i></button>
+                                        <button class="eliminar"><i class="fa-solid fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>
+                                    <div class="foto-perfil">
+                                        <i class="fa-solid fa-user"></i>
+                                    </div>
+                                </td>
+                                <td>2025003</td>
+                                <td>Luis Antonio Martínez</td>
+                                <td>2°</td>
+                                <td>B</td>
+                                <td><span class="activo">Activo</span></td>
+                                <td>
+                                    <div class="acciones">
+                                        <button class="ver"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="editar"><i class="fa-solid fa-pen"></i></button>
+                                        <button class="eliminar"><i class="fa-solid fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>4</td>
+                                <td>
+                                    <div class="foto-perfil">
+                                        <i class="fa-solid fa-user"></i>
+                                    </div>
+                                </td>
+                                <td>2025004</td>
+                                <td>Ana Sofía Hernández</td>
+                                <td>3°</td>
+                                <td>C</td>
+                                <td><span class="inactivo">Inactivo</span></td>
+                                <td>
+                                    <div class="acciones">
+                                        <button class="ver"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="editar"><i class="fa-solid fa-pen"></i></button>
+                                        <button class="eliminar"><i class="fa-solid fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>5</td>
+                                <td>
+                                    <div class="foto-perfil">
+                                        <i class="fa-solid fa-user"></i>
+                                    </div>
+                                </td>
+                                <td>2025005</td>
+                                <td>Diego Alejandro Torres</td>
+                                <td>1°</td>
+                                <td>A</td>
+                                <td><span class="activo">Activo</span></td>
+                                <td>
+                                    <div class="acciones">
+                                        <button class="ver"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="editar"><i class="fa-solid fa-pen"></i></button>
+                                        <button class="eliminar"><i class="fa-solid fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="footer-tabla">
+                        <span class="info-registros">Mostrando 1 a 5 de 35 estudiantes</span>
+
+                        <div class="paginacion">
+                            <button><i class="fa-solid fa-chevron-left"></i></button>
+                            <button class="pagina-activa">1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button>4</button>
+                            <button>5</button>
+                            <span>...</span>
+                            <button><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+
+                        <select class="registros-pagina">
+                            <option>5 por página</option>
+                            <option>10 por página</option>
+                            <option>20 por página</option>
+                        </select>
+                    </div>
+
+                </section>
+
+                <!-- ESTUDIANTES RECIENTES -->
+                <section class="actividad">
+                    <h3>Estudiantes Recientes</h3>
+
+                    <div class="actividad-item">
+                        <div class="actividad-icon estudiante">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </div>
+                        <div>
+                            <strong>Juan Pérez López</strong>
+                            <p>Carnet: 2025001</p>
+                            <small>Hoy - 08:15 AM</small>
+                        </div>
+                    </div>
+
+                    <div class="actividad-item">
+                        <div class="actividad-icon estudiante">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </div>
+                        <div>
+                            <strong>María Gómez</strong>
+                            <p>Carnet: 2025002</p>
+                            <small>Hoy - 09:40 AM</small>
+                        </div>
+                    </div>
+
+                    <div class="actividad-item">
+                        <div class="actividad-icon estudiante">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </div>
+                        <div>
+                            <strong>Luis Martínez</strong>
+                            <p>Carnet: 2025003</p>
+                            <small>Ayer - 03:25 PM</small>
+                        </div>
+                    </div>
+
+                    <button class="ver-todos">Ver todos</button>
+                </section>
+
+            </div>
+
+            <footer>
+                © ControlFace - Sistema de Asistencia con Reconocimiento Facial
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="Buscar Estudiantes.js"></script>
+
+</body>
+
+</html>
